@@ -1,0 +1,2 @@
+# KabulaInverseCQ
+The inVerse Bible study guide curriculum has been developed for those who yearn for a more profound Bible study experience. It will dare you to engage Scripture more deeply and more broadly, ultimately enriching the ability to share your growing experience with others. Everything from the content to the format has been designed to enhance your spiritual journey if you will accept the challenge of engaging this Bible study.
