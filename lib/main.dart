@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kabulachoruses/about.dart';
 import 'package:kabulachoruses/app.dart';
+import 'package:kabulachoruses/chorus.dart';
 import 'package:kabulachoruses/splash.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         home: const ScreenSplash(),
         routes: <String, WidgetBuilder>{
           "/app": (context) => const ScreenApp(),
+          "/chorus": (context) => const ScreenChorus(),
           "/about": (context) => ScreenAbout(),
         });
   }
