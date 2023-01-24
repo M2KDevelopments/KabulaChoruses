@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.m2kdevelopments" "\0"
-            VALUE "FileDescription", "inversecq" "\0"
+            VALUE "FileDescription", "kabulachoruses" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "inversecq" "\0"
+            VALUE "InternalName", "kabulachoruses" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.m2kdevelopments. All rights reserved." "\0"
-            VALUE "OriginalFilename", "inversecq.exe" "\0"
-            VALUE "ProductName", "inversecq" "\0"
+            VALUE "OriginalFilename", "kabulachoruses.exe" "\0"
+            VALUE "ProductName", "kabulachoruses" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

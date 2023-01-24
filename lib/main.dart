@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:inversecq/about.dart';
-import 'package:inversecq/app.dart';
-import 'package:inversecq/settings.dart';
-import 'package:inversecq/splash.dart';
-import 'package:inversecq/welcome.dart';
+import 'package:kabulachoruses/about.dart';
+import 'package:kabulachoruses/app.dart';
+import 'package:kabulachoruses/splash.dart';
 
 void main() {
   //shared preferences settings
@@ -18,13 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Inverse CQ',
+        title: 'Kabula Choruses',
         theme: ThemeData(primarySwatch: Colors.blueGrey),
-        home: ScreenSplash(),
+        home: const ScreenSplash(),
         routes: <String, WidgetBuilder>{
           "/app": (context) => const ScreenApp(),
-          "/settings": (context) => ScreenSettings(),
-          "/welcome": (context) => ScreenWelcome(),
           "/about": (context) => ScreenAbout(),
         });
   }

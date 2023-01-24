@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.m2kdevelopments.inversecq">
+    package="com.m2kdevelopments.kabulachoruses">
    <application
-        android:label="inversecq"
+        android:label="kabulachoruses"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

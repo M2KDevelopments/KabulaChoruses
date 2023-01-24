@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ScreenSplash extends StatefulWidget {
-  ScreenSplash({Key? key}) : super(key: key);
+  const ScreenSplash({Key? key}) : super(key: key);
 
   @override
   State<ScreenSplash> createState() => _ScreenSplashState();
 }
 
 class _ScreenSplashState extends State<ScreenSplash> {
-  void _onStart() {
-    Navigator.pushNamed(context, "/app");
-  }
+  final _size = 180.0;
+
+  void _onStart() => Navigator.pushNamed(context, "/app");
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,15 @@ class _ScreenSplashState extends State<ScreenSplash> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logo.png'),
+              Image.asset(
+                'assets/logo.png',
+                width: _size,
+                height: _size,
+              ),
               ElevatedButton(
-                  onPressed: _onStart, child: const Text('Inverse Bible Study'))
+                onPressed: _onStart,
+                child: const Text('Kabula Choruses'),
+              )
             ],
           ),
         ),
