@@ -30,22 +30,6 @@ class _ScreenChorusState extends State<ScreenChorus> {
         child: Column(
           children: [
             Text(chorus.title),
-            ListView.builder(
-                itemCount: chorus.verse != null
-                    ? chorus.verse?.length
-                    : chorus.verses?.length,
-                itemBuilder: (context, index) {
-                  final List<String>? list = chorus.verse ?? chorus.verses;
-                  String text = list![index];
-                  return Expanded(
-                    child: Text(
-                      text,
-                      style: const TextStyle(
-                        fontSize: 15,
-                      ),
-                    ),
-                  );
-                })
           ],
         ),
       ),

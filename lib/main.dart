@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kabulachoruses/about.dart';
-import 'package:kabulachoruses/app.dart';
-import 'package:kabulachoruses/chorus.dart';
-import 'package:kabulachoruses/splash.dart';
+import 'package:kabulachoruses/screens/about.dart';
+import 'package:kabulachoruses/screens/app.dart';
+import 'package:kabulachoruses/screens/chorus.dart';
+import 'package:kabulachoruses/screens/splash.dart';
 
 void main() {
   //shared preferences settings

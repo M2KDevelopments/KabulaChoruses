@@ -79,7 +79,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="D:\Users\MARTIN\Desktop\Work\M2K Developments\Apps\Kabula Hill SDA\KabulaKabulaChoruses\assets\logo.png" />
+                                                <entry key="imagePath" value="D:\Users\MARTIN\Desktop\Work\M2K Developments\Apps\Kabula Hill SDA\KabulaChoruses\assets\logo512.png" />
                                                 <entry key="scalingPercent" value="86" />
                                               </map>
                                             </option>
@@ -113,7 +113,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ffffff" />
+                                      <entry key="backgroundColor" value="f6f6f6" />
                                     </map>
                                   </option>
                                 </PersistentState>

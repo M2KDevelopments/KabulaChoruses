@@ -10,6 +10,11 @@ class ScreenAbout extends StatefulWidget {
 class _ScreenAboutState extends State<ScreenAbout> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("About"),
+      ),
+      body: Container(),
+    );
   }
 }
