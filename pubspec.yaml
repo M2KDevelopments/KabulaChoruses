@@ -36,6 +36,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   lottie: ^2.2.0
+  awesome_dialog: ^3.0.2
+  youtube_player_flutter: ^8.1.2
+  toast: ^0.3.0
+  url_launcher: ^6.1.8
+  share_plus: ^6.3.0
 
 dev_dependencies:
   flutter_test:

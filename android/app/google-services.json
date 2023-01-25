@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "904828231710",
+    "firebase_url": "https://kabulahillchurch-default-rtdb.firebaseio.com",
+    "project_id": "kabulahillchurch",
+    "storage_bucket": "kabulahillchurch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904828231710:android:4d5c7733035120b0ef4e0f",
+        "android_client_info": {
+          "package_name": "com.m2kdevelopments.kabulachoruses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904828231710-lk5llk1m2uce0bm19r3m8913864arp98.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK2AqJeWpZpFFNHzXwugE_uwdcz5TGxEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904828231710-lk5llk1m2uce0bm19r3m8913864arp98.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,6 +7,7 @@ import 'package:kabulachoruses/classes/chorus.dart';
 
 class ControllerChorus extends GetxController {
   final names = <String>[].obs;
+  final songNumber = 0.obs;
 
   Future load() async {
     var file = await rootBundle.loadString("assets/chorus.json");
@@ -15,9 +16,9 @@ class ControllerChorus extends GetxController {
     names.value = list;
   }
 
-  String getName(int index) {
-    return names[index];
-  }
+  String getName(int index) => names[index];
+
+  void setNumber(int num) => songNumber.value = num;
 
   Future<String> getYoutube(int index) async {
     var name = names[index];
@@ -39,6 +40,12 @@ class ControllerChorus extends GetxController {
     if (song["verses"] != null) verses = List.of(song["verses"]).cast<String>();
     if (song["verse"] != null) verse = List.of(song["verse"]).cast<String>();
     if (song["youtube"] != null) youtube = song["youtube"].toString();
-    return Chorus(name, verses, verse, chorus, youtube);
+    return Chorus(
+      name,
+      verses: verses,
+      verse: verse,
+      chorus: chorus,
+      youtube: youtube,
+    );
   }
 }

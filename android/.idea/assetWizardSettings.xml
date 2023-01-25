@@ -67,6 +67,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
+                                                <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="C:\Users\MARTIN\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
@@ -79,7 +80,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="D:\Users\MARTIN\Desktop\Work\M2K Developments\Apps\Kabula Hill SDA\KabulaChoruses\assets\logo512.png" />
+                                                <entry key="imagePath" value="D:\Users\MARTIN\Desktop\Work\M2K Developments\Apps\Kabula Hill SDA\KabulaChoruses\assets\logo2.png" />
                                                 <entry key="scalingPercent" value="86" />
                                               </map>
                                             </option>

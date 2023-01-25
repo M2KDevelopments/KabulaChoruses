@@ -11,8 +11,7 @@ class ScreenSplash extends StatefulWidget {
 }
 
 class _ScreenSplashState extends State<ScreenSplash> {
-  
-  final _size = 120.0;
+  final _size = 200.0;
   final _controllerChorus = Get.put(ControllerChorus());
 
   @override
@@ -33,8 +32,9 @@ class _ScreenSplashState extends State<ScreenSplash> {
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
             colors: [
-              Color.fromARGB(255, 177, 202, 221),
-              Colors.blueGrey,
+              Color.fromARGB(255, 254, 254, 254),
+              Color.fromARGB(255, 211, 186, 214),
+              Color.fromARGB(255, 88, 0, 88),
             ],
           ),
         ),
@@ -48,8 +48,8 @@ class _ScreenSplashState extends State<ScreenSplash> {
                 height: _size,
               ),
               SizedBox(
-                width: 100,
-                height: 100,
+                width: _size,
+                height: _size,
                 child: Lottie.asset('assets/anim/loading.json'),
               ),
               const Text(

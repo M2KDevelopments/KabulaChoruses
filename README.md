@@ -1,2 +1,26 @@
-# KabulaKabulaChoruses
-The inVerse Bible study guide curriculum has been developed for those who yearn for a more profound Bible study experience. It will dare you to engage Scripture more deeply and more broadly, ultimately enriching the ability to share your growing experience with others. Everything from the content to the format has been designed to enhance your spiritual journey if you will accept the challenge of engaging this Bible study.
+# Kabula HIll Choruses
+<img src="./logo.png"/>
+Popular choruses sang by Kabula Hill SDA
+
+
+## Android Google Play 
+<img src="./googleplay.png" width="400px"/>
+```
+https://drive.google.com/drive/folders/1v7uamwFGZBhUKGAWHYAZptJBEeCKcOX8?usp=share_link
+```
+
+
+## Website
+```
+https://www.facebook.com/kabulahillsdachurch
+```
+
+## Facebook Page
+```
+https://www.facebook.com/kabulahillsdachurch
+```
+
+## Download Resources
+```
+https://drive.google.com/drive/folders/1v7uamwFGZBhUKGAWHYAZptJBEeCKcOX8?usp=share_link
+```

@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Kabula Choruses',
-        theme: ThemeData(primarySwatch: Colors.blueGrey),
+        theme: ThemeData(primarySwatch: Colors.deepPurple),
         home: const ScreenSplash(),
         routes: <String, WidgetBuilder>{
           "/app": (context) => const ScreenApp(),
           "/chorus": (context) => const ScreenChorus(),
-          "/about": (context) => ScreenAbout(),
+          "/about": (context) => const ScreenAbout(),
         });
   }
 }

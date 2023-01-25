@@ -1,5 +1,8 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:kabulachoruses/classes/chorus.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class ScreenChorus extends StatefulWidget {
   const ScreenChorus({Key? key}) : super(key: key);
@@ -8,7 +11,47 @@ class ScreenChorus extends StatefulWidget {
 }
 
 class _ScreenChorusState extends State<ScreenChorus> {
-  void _onYoutube() {}
+  void _onYoutube(Chorus chorus) {
+    var youtube = chorus.youtube;
+    if (kDebugMode) print(youtube);
+
+    if (youtube == null || youtube == "") {
+      AwesomeDialog(
+        context: context,
+        animType: AnimType.rightSlide,
+        headerAnimationLoop: false,
+        dialogType: DialogType.warning,
+        barrierColor: Colors.black12,
+        body: const Center(
+            child: Text(
+          "No Youtube Video Available",
+          style: TextStyle(fontSize: 17, color: Colors.purple),
+        )),
+        enableEnterKey: true,
+      ).show();
+    } else {
+      var initialVideoId = youtube.replaceAll(RegExp(r'.*v='), '');
+
+      AwesomeDialog(
+        context: context,
+        animType: AnimType.scale,
+        headerAnimationLoop: false,
+        dialogType: DialogType.success,
+        barrierColor: Colors.black12,
+        body: YoutubePlayer(
+          controller: YoutubePlayerController(
+            initialVideoId: initialVideoId,
+            flags: const YoutubePlayerFlags(
+              autoPlay: true,
+              mute: true,
+            ),
+          ),
+          showVideoProgressIndicator: true,
+        ),
+        enableEnterKey: true,
+      ).show();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +63,39 @@ class _ScreenChorusState extends State<ScreenChorus> {
           children: [
             Text(chorus.title),
             IconButton(
-                onPressed: _onYoutube,
+                onPressed: () => _onYoutube(chorus),
                 icon: const Icon(Icons.play_circle_outline))
           ],
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(5.0),
-        child: Column(
-          children: [
-            Text(chorus.title),
-          ],
-        ),
+        child: ListView.builder(
+            itemCount: chorus.getSong().length,
+            itemBuilder: (context, index) {
+              var info = chorus.getSong()[index];
+              return Column(children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 10.0),
+                  child: Text(
+                    info.title!,
+                    style: const TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        color: Color.fromARGB(255, 74, 20, 140)),
+                  ),
+                ),
+                Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: info.listOfText!
+                        .map((text) => Text(
+                              text,
+                              style: const TextStyle(fontSize: 40),
+                              textAlign: TextAlign.center,
+                            ))
+                        .toList())
+              ]);
+            }),
       ),
     );
   }
