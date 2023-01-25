@@ -7,7 +7,7 @@ Popular choruses sang by Kabula Hill SDA
 <img src="./googleplay.png" width="400px"/>
 
 ```
-https://drive.google.com/drive/folders/1v7uamwFGZBhUKGAWHYAZptJBEeCKcOX8?usp=share_link
+https://play.google.com/store/apps/details?id=com.m2kdevelopments.kabulachoruses
 ```
 
 

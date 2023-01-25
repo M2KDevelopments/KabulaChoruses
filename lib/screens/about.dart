@@ -54,7 +54,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
   void _onPlayStore() {}
 
-  void _onGooglePlayStore() {}
+  void _onGooglePlayStore() => _loadUrl(
+      "https://play.google.com/store/apps/details?id=com.m2kdevelopments.kabulachoruses");
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +63,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
       elevation: MaterialStateProperty.all<double>(10.0),
       shadowColor: MaterialStateProperty.all<Color>(Colors.grey),
       foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-      backgroundColor:
-          MaterialStateProperty.all<Color>(Color.fromARGB(255, 255, 255, 255)),
+      backgroundColor: MaterialStateProperty.all<Color>(
+          const Color.fromARGB(255, 255, 255, 255)),
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -231,7 +232,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                                     height: _size,
                                   ),
                                   Text(
-                                    "Coming Soon...",
+                                    "Google Play",
                                     style: textStyle,
                                   )
                                 ],
