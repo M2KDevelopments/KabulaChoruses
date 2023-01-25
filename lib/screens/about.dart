@@ -49,7 +49,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
       "https://drive.google.com/drive/folders/1v7uamwFGZBhUKGAWHYAZptJBEeCKcOX8?usp=share_link");
 
   void _onShare() => Share.share(
-      'Hey Be Blessed with Kabula Choruses\nhttps://drive.google.com/drive/folders/1v7uamwFGZBhUKGAWHYAZptJBEeCKcOX8?usp=share_link',
+      'Hey Be Blessed with Kabula Choruses\nhttps://play.google.com/store/apps/details?id=com.m2kdevelopments.kabulachoruses',
       subject: 'Kabula Choruses');
 
   void _onPlayStore() {}
