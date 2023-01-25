@@ -96,3 +96,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+#https://pub.dev/packages/msix
+msix_config:
+  display_name: Kabula Choruses
+  publisher_display_name: M2K Developments
+  identity_name: com.m2kdevelopments.kabulachoruses
+  msix_version: 1.0.0.0
+  logo_path: ./assets/logo2.png
+  capabilities: internetClient
