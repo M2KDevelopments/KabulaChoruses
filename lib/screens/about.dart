@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ScreenAbout extends StatefulWidget {
-  ScreenAbout({Key? key}) : super(key: key);
+  const ScreenAbout({Key? key}) : super(key: key);
 
   @override
   State<ScreenAbout> createState() => _ScreenAboutState();
