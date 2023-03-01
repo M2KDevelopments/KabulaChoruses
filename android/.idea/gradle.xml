@@ -9,6 +9,10 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$/../../../../../../Software/Android/Flutter/flutter_windows_2.5.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.7.2+3/android" />
+            <option value="$PROJECT_DIR$/../../../../../../Software/Android/Flutter/flutter_windows_2.5.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.22/android" />
+            <option value="$PROJECT_DIR$/../../../../../../Software/Android/Flutter/flutter_windows_2.5.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/share_plus-6.3.0/android" />
+            <option value="$PROJECT_DIR$/../../../../../../Software/Android/Flutter/flutter_windows_2.5.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_android-6.0.23/android" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
           </set>

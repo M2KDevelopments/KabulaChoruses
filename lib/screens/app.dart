@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:kabulachoruses/controller/ControllerChorus.dart';
 import 'package:kabulachoruses/widget/searchmenu.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:new_version/new_version.dart';
 
 class ScreenApp extends StatefulWidget {
   const ScreenApp({Key? key}) : super(key: key);
@@ -15,6 +16,17 @@ class ScreenApp extends StatefulWidget {
 
 class _ScreenAppState extends State<ScreenApp> {
   final _chorusController = Get.find<ControllerChorus>();
+
+  @override
+  void initState() {
+    super.initState();
+    // Instantiate NewVersion manager object (Using GCP Console app as example)
+    final newVersion = NewVersion(
+      //iOSId: 'com.m2kdevelopments.kabulachoruses',
+      androidId: 'com.m2kdevelopments.kabulachoruses',
+    );
+    newVersion.showAlertIfNecessary(context: context);
+  }
 
   void _onSong(int index) async {
     var chorus = await _chorusController.getChorus(index);
