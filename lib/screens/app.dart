@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kabulachoruses/controller/ControllerChorus.dart';
+import 'package:kabulachoruses/widget/searchmenu.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class ScreenApp extends StatefulWidget {
@@ -211,12 +212,21 @@ class _ScreenAppState extends State<ScreenApp> {
     Navigator.pushNamed(context, "/about");
   }
 
+  void _onSearch(BuildContext context) {
+    showSearch(
+        context: context, delegate: WidgetSearchMenu(_chorusController.names));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Choruses"),
+        elevation: 8.0,
         actions: [
+          IconButton(
+              onPressed: () => _onSearch(context),
+              icon: const Icon(Icons.search)),
           IconButton(onPressed: _onAbout, icon: const Icon(Icons.info_outline))
         ],
       ),

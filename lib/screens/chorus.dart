@@ -11,6 +11,13 @@ class ScreenChorus extends StatefulWidget {
 }
 
 class _ScreenChorusState extends State<ScreenChorus> {
+  //Parse text
+  String _parseText(String text) =>
+      "${text[0].toUpperCase()}${text.substring(1).toLowerCase()}"
+          .replaceAll("god", "God")
+          .replaceAll("lord", "Lord")
+          .replaceAll("jesus", "Jesus");
+
   void _onYoutube(Chorus chorus) {
     var youtube = chorus.youtube;
     if (kDebugMode) print(youtube);
@@ -89,8 +96,8 @@ class _ScreenChorusState extends State<ScreenChorus> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: info.listOfText!
                         .map((text) => Text(
-                              text,
-                              style: const TextStyle(fontSize: 40),
+                              _parseText("$text\n"),
+                              style: const TextStyle(fontSize: 35),
                               textAlign: TextAlign.center,
                             ))
                         .toList())
