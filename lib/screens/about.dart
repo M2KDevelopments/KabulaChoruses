@@ -57,6 +57,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
   void _onGooglePlayStore() => _loadUrl(
       "https://play.google.com/store/apps/details?id=com.m2kdevelopments.kabulachoruses");
 
+  void _onSubmitChorus() => _loadUrl("https://forms.gle/Sc792qTVsauac8yr9");
+
   @override
   Widget build(BuildContext context) {
     var btnStyle = ButtonStyle(
@@ -91,8 +93,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomLeft,
                 colors: [
-                  Color.fromARGB(79, 88, 0, 88),
-                  Color.fromARGB(255, 254, 254, 254),
+                  Color.fromARGB(79, 46, 1, 46),
+                  Color.fromARGB(255, 251, 233, 255),
                   Color.fromARGB(255, 254, 254, 254),
                   Color.fromARGB(255, 254, 254, 254),
                 ],
@@ -167,6 +169,21 @@ class _ScreenAboutState extends State<ScreenAbout> {
                                   ),
                                   Text(
                                     "Copy Link to Downloads",
+                                    style: textStyle,
+                                  )
+                                ],
+                              )),
+                          ElevatedButton(
+                              style: btnStyle,
+                              onPressed: _onSubmitChorus,
+                              child: Row(
+                                children: [
+                                  const Icon(
+                                    Icons.music_note_sharp,
+                                    color: Colors.purple,
+                                  ),
+                                  Text(
+                                    "Submit New Chorus",
                                     style: textStyle,
                                   )
                                 ],

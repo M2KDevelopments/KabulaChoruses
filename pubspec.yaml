@@ -41,8 +41,8 @@ dependencies:
   toast: ^0.3.0
   url_launcher: ^6.1.8
   share_plus: ^6.3.0
-  new_version: ^0.3.1
   firebase_core: ^2.7.0
+  new_version_plus: ^0.0.3
 
 dev_dependencies:
   flutter_test:

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:kabulachoruses/controller/ControllerChorus.dart';
 import 'package:kabulachoruses/widget/searchmenu.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import 'package:new_version/new_version.dart';
+import 'package:new_version_plus/new_version_plus.dart';
 
 class ScreenApp extends StatefulWidget {
   const ScreenApp({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class _ScreenAppState extends State<ScreenApp> {
   void initState() {
     super.initState();
     // Instantiate NewVersion manager object (Using GCP Console app as example)
-    final newVersion = NewVersion(
+    final newVersion = NewVersionPlus(
       //iOSId: 'com.m2kdevelopments.kabulachoruses',
       androidId: 'com.m2kdevelopments.kabulachoruses',
     );
