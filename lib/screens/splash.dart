@@ -27,17 +27,6 @@ class _ScreenSplashState extends State<ScreenSplash> {
     return Scaffold(
       body: SafeArea(
           child: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [
-              Color.fromARGB(255, 254, 254, 254),
-              Color.fromARGB(255, 211, 186, 214),
-              Color.fromARGB(255, 88, 0, 88),
-            ],
-          ),
-        ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -26,10 +26,10 @@ class _ScreenAboutState extends State<ScreenAbout> {
     }
   }
 
-  void _onWebsite() => _loadUrl("http://kabulahillsdachurch.com//");
+  void _onWebsite() => _loadUrl("http://kabulahillsdachurch.com");
 
   void _onFacebook() =>
-      _loadUrl("https://www.facebook.com/kabulahillsdachurch/");
+      _loadUrl("https://www.facebook.com/kabulahillsdachurch");
 
   void _onCopy() async {
     await Clipboard.setData(const ClipboardData(
@@ -77,9 +77,9 @@ class _ScreenAboutState extends State<ScreenAbout> {
     );
 
     var textStyle = const TextStyle(
-      color: Color.fromARGB(255, 69, 9, 79),
+      color: Color.fromARGB(255, 137, 122, 140),
       fontSize: 19,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w700,
     );
 
     return Scaffold(
@@ -88,193 +88,184 @@ class _ScreenAboutState extends State<ScreenAbout> {
       ),
       body: SingleChildScrollView(
         child: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomLeft,
-                colors: [
-                  Color.fromARGB(79, 46, 1, 46),
-                  Color.fromARGB(255, 251, 233, 255),
-                  Color.fromARGB(255, 254, 254, 254),
-                  Color.fromARGB(255, 254, 254, 254),
-                ],
-              ),
-            ),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Image.asset(
-                    'assets/logo.png',
-                    width: 250,
-                    height: 250,
-                  ),
-                  Padding(
-                      padding: const EdgeInsets.all(40.0),
-                      child: Column(
-                        children: [
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onWebsite,
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.public,
-                                    color: Colors.purple,
-                                  ),
-                                  Text(
-                                    "KHC Wesbite",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onFacebook,
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.facebook,
-                                    color: Colors.purple,
-                                  ),
-                                  Text(
-                                    "KHC Facebook Page",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onShare,
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.share,
-                                    color: Colors.purple,
-                                  ),
-                                  Text(
-                                    "Share The App",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onCopy,
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.copy,
-                                    color: Colors.purple,
-                                  ),
-                                  Text(
-                                    "Copy Link to Downloads",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onSubmitChorus,
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.music_note_sharp,
-                                    color: Colors.purple,
-                                  ),
-                                  Text(
-                                    "Submit New Chorus",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          const Divider(),
-                          const Text("Downloads"),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onAPK,
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    'assets/apk.png',
-                                    width: _size,
-                                    height: _size,
-                                  ),
-                                  Text(
-                                    "Android APK",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onWindows,
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    'assets/windows.png',
-                                    width: _size,
-                                    height: _size,
-                                  ),
-                                  Text(
-                                    "Windows PC",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onPDF,
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    'assets/pdf.png',
-                                    width: _size,
-                                    height: _size,
-                                  ),
-                                  Text(
-                                    "PDF Document",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onGooglePlayStore,
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    'assets/googleplay.png',
-                                    width: _size,
-                                    height: _size,
-                                  ),
-                                  Text(
-                                    "Google Play",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                          ElevatedButton(
-                              style: btnStyle,
-                              onPressed: _onPlayStore,
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    'assets/ios.png',
-                                    width: _size,
-                                    height: _size,
-                                  ),
-                                  Text(
-                                    "Coming Soon...",
-                                    style: textStyle,
-                                  )
-                                ],
-                              )),
-                        ],
-                      ))
-                ],
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/logo.png',
+                width: 250,
+                height: 250,
               ),
-            )),
+              Padding(
+                  padding: const EdgeInsets.all(40.0),
+                  child: Column(
+                    children: [
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onWebsite,
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.public,
+                                color: Colors.orange,
+                              ),
+                              Text(
+                                "KHC Wesbite",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onFacebook,
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.facebook,
+                                color: Colors.blue,
+                              ),
+                              Text(
+                                "KHC Facebook Page",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onShare,
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.share,
+                                color: Colors.green,
+                              ),
+                              Text(
+                                "Share The App",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onCopy,
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.copy,
+                                color: Colors.red,
+                              ),
+                              Text(
+                                "Copy Link to Downloads",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onSubmitChorus,
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.music_note_sharp,
+                                color: Colors.purple,
+                              ),
+                              Text(
+                                "Submit New Chorus",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      const Divider(),
+                      const Text("Downloads"),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onAPK,
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.android,
+                                color: Colors.green,
+                              ),
+                              Text(
+                                "Android APK",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onWindows,
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/windows.png',
+                                width: _size,
+                                height: _size,
+                              ),
+                              Text(
+                                "Windows PC",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onPDF,
+                          child: Row(
+                            children: [
+                              // Image.asset(
+                              //   'assets/pdf.png',
+                              //   width: _size,
+                              //   height: _size,
+                              // ),
+                              const Icon(
+                                Icons.picture_as_pdf,
+                                color: Colors.red,
+                              ),
+                              Text(
+                                "PDF Document",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onGooglePlayStore,
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/googleplay.png',
+                                width: _size,
+                                height: _size,
+                              ),
+                              Text(
+                                "Google Play",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                      ElevatedButton(
+                          style: btnStyle,
+                          onPressed: _onPlayStore,
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/ios.png',
+                                width: _size,
+                                height: _size,
+                              ),
+                              Text(
+                                "Coming Soon...",
+                                style: textStyle,
+                              )
+                            ],
+                          )),
+                    ],
+                  ))
+            ],
+          ),
+        )),
       ),
     );
   }

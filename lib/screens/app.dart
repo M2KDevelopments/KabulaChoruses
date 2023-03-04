@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kabulachoruses/controller/ControllerChorus.dart';
 import 'package:kabulachoruses/widget/searchmenu.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:new_version_plus/new_version_plus.dart';
 
 class ScreenApp extends StatefulWidget {
@@ -57,30 +56,9 @@ class _ScreenAppState extends State<ScreenApp> {
         enableEnterKey: true,
       ).show();
     } else {
-      var initialVideoId = youtube.replaceAll(RegExp(r'.*v='), '');
-
-      AwesomeDialog(
-        context: context,
-        animType: AnimType.scale,
-        headerAnimationLoop: false,
-        dialogType: DialogType.success,
-        barrierColor: Colors.black12,
-        body: YoutubePlayer(
-          controller: YoutubePlayerController(
-            initialVideoId: initialVideoId,
-            flags: const YoutubePlayerFlags(
-              autoPlay: true,
-              mute: true,
-            ),
-          ),
-          showVideoProgressIndicator: true,
-        ),
-        btnOkColor: Colors.purple,
-        btnOkIcon: Icons.music_note,
-        btnOkText: "Go To Chorus",
-        btnOkOnPress: () => _onSong(index),
-        enableEnterKey: true,
-      ).show();
+      var chorus = await _chorusController.getChorus(index);
+      // ignore: use_build_context_synchronously
+      Navigator.pushNamed(context, "/youtube", arguments: chorus);
     }
   }
 
@@ -281,10 +259,10 @@ class _ScreenAppState extends State<ScreenApp> {
                                 children: [
                                   IconButton(
                                     onPressed: () => _onYoutube(index),
-                                    icon: const Icon(
-                                      size: 30,
-                                      Icons.play_circle_outline,
-                                      color: Color.fromARGB(255, 85, 49, 94),
+                                    icon: Image.asset(
+                                      'assets/youtube.png',
+                                      width: 40,
+                                      height: 40,
                                     ),
                                   )
                                 ],

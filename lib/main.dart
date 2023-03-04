@@ -3,6 +3,7 @@ import 'package:kabulachoruses/screens/about.dart';
 import 'package:kabulachoruses/screens/app.dart';
 import 'package:kabulachoruses/screens/chorus.dart';
 import 'package:kabulachoruses/screens/splash.dart';
+import 'package:kabulachoruses/screens/youtube.dart';
 
 void main() {
   //shared preferences settings
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         routes: <String, WidgetBuilder>{
           "/app": (context) => const ScreenApp(),
           "/chorus": (context) => const ScreenChorus(),
+          "/youtube": (context) => const ScreenYoutube(),
           "/about": (context) => const ScreenAbout(),
         });
   }
