@@ -57,7 +57,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
   void _onGooglePlayStore() => _loadUrl(
       "https://play.google.com/store/apps/details?id=com.m2kdevelopments.kabulachoruses");
 
-  void _onSubmitChorus() => _loadUrl("https://forms.gle/Sc792qTVsauac8yr9");
+  void _onSubmitChorus() => _loadUrl("https://docs.google.com/forms/d/e/1FAIpQLSesS07FLzK69pBCwBhLRbxSDuKzxEoYHeYf2icOVPz6w4hIVg/viewform");
 
   @override
   Widget build(BuildContext context) {

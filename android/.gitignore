@@ -11,5 +11,7 @@ GeneratedPluginRegistrant.java
 key.properties
 **/*.keystore
 **/*.jks
-*.aab
-*.apk
+**/*.aab
+**/*.apk
+
+release/

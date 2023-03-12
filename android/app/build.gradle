@@ -53,6 +53,20 @@ android {
         versionName flutterVersionName
     }
 
+//    signingConfigs {
+//
+//        release {
+//            storeFile file("m2kdevelopments.jks")
+//            storePassword("****")
+//            keyAlias("m2kdevelopments")
+//            keyPassword("****")
+//
+//            // Optional, specify signing versions used
+//            v1SigningEnabled true
+//            v2SigningEnabled true
+//        }
+//    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
