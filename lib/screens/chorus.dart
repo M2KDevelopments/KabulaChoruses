@@ -66,14 +66,14 @@ class _ScreenChorusState extends State<ScreenChorus> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            Text(chorus.title),
-            IconButton(
-                onPressed: () => _onYoutube(chorus),
-                icon: const Icon(Icons.play_circle_outline))
-          ],
+        title: Text(
+          "${chorus.number}. ${chorus.title}",
         ),
+        actions: [
+          IconButton(
+              onPressed: () => _onYoutube(chorus),
+              icon: const Icon(Icons.play_circle_outline))
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(5.0),

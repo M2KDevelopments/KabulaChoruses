@@ -46,6 +46,7 @@ class ControllerChorus extends GetxController {
       verse: verse,
       chorus: chorus,
       youtube: youtube,
+      number: index + 1,
     );
   }
 }

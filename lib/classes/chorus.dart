@@ -6,7 +6,9 @@ class Chorus {
   late List<String>? verses = [];
   late String? chorus = "";
   late String? youtube = "";
-  Chorus(this.title, {this.verses, this.verse, this.chorus, this.youtube});
+  late int? number = 0;
+  Chorus(this.title,
+      {this.verses, this.verse, this.chorus, this.youtube, this.number});
 
   List<Info> getSong() {
     if (verse!.isNotEmpty) {
