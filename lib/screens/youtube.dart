@@ -24,7 +24,8 @@ class _ScreenYoutubeState extends State<ScreenYoutube> {
           initialVideoId: YoutubePlayer.convertUrlToId(chorus.youtube!) ?? "",
           flags: const YoutubePlayerFlags(
             autoPlay: true,
-            mute: true,
+            mute: false,
+            controlsVisibleAtStart: true,
           ),
         ),
         showVideoProgressIndicator: true,

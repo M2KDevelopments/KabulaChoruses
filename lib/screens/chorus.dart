@@ -37,26 +37,7 @@ class _ScreenChorusState extends State<ScreenChorus> {
         enableEnterKey: true,
       ).show();
     } else {
-      var initialVideoId = youtube.replaceAll(RegExp(r'.*v='), '');
-
-      AwesomeDialog(
-        context: context,
-        animType: AnimType.scale,
-        headerAnimationLoop: false,
-        dialogType: DialogType.success,
-        barrierColor: Colors.black12,
-        body: YoutubePlayer(
-          controller: YoutubePlayerController(
-            initialVideoId: initialVideoId,
-            flags: const YoutubePlayerFlags(
-              autoPlay: true,
-              mute: true,
-            ),
-          ),
-          showVideoProgressIndicator: true,
-        ),
-        enableEnterKey: true,
-      ).show();
+      Navigator.pushNamed(context, "/youtube", arguments: chorus);
     }
   }
 
