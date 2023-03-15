@@ -2,7 +2,6 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:kabulachoruses/classes/chorus.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class ScreenChorus extends StatefulWidget {
   const ScreenChorus({Key? key}) : super(key: key);
