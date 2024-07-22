@@ -56,28 +56,18 @@ class _ScreenChorusState extends State<ScreenChorus> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(8.0),
         child: ListView.builder(
             itemCount: chorus.getSong().length,
             itemBuilder: (context, index) {
               var info = chorus.getSong()[index];
               return Column(children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 10.0),
-                  child: Text(
-                    info.title!,
-                    style: const TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w700,
-                        color: Color.fromARGB(255, 74, 20, 140)),
-                  ),
-                ),
                 Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: info.listOfText!
                         .map((text) => Text(
                               _parseText("$text\n"),
-                              style: const TextStyle(fontSize: 35),
+                              style: const TextStyle(fontSize: 24),
                               textAlign: TextAlign.center,
                             ))
                         .toList())

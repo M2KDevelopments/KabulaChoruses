@@ -66,36 +66,40 @@ class _ScreenAppState extends State<ScreenApp> {
     var size = 70.0;
     var btnStyle = ButtonStyle(
       foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-      backgroundColor: MaterialStateProperty.all<Color>(
-          const Color.fromARGB(255, 96, 13, 107)),
+      backgroundColor:
+          MaterialStateProperty.all<Color>(Color.fromARGB(255, 3, 98, 187)),
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(size / 2),
-          side: const BorderSide(color: Color.fromARGB(255, 50, 13, 53)),
+          side: const BorderSide(color: Colors.blue),
         ),
       ),
     );
 
     var textStyle = const TextStyle(fontSize: 25);
-    return SizedBox(
-      width: size,
-      height: size,
-      child: ElevatedButton(
-          style: btnStyle,
-          onPressed: () => setState(() {
-                var songNumber = _chorusController.songNumber.value;
-                if ((songNumber * 10) + num > _chorusController.names.length) {
-                  songNumber = _chorusController.names.length;
-                } else {
-                  songNumber *= 10;
-                  songNumber += num;
-                }
-                _chorusController.setNumber(songNumber);
-              }),
-          child: Text(
-            num.toString(),
-            style: textStyle,
-          )),
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
+      child: SizedBox(
+        width: size,
+        height: size,
+        child: ElevatedButton(
+            style: btnStyle,
+            onPressed: () => setState(() {
+                  var songNumber = _chorusController.songNumber.value;
+                  if ((songNumber * 10) + num >
+                      _chorusController.names.length) {
+                    songNumber = _chorusController.names.length;
+                  } else {
+                    songNumber *= 10;
+                    songNumber += num;
+                  }
+                  _chorusController.setNumber(songNumber);
+                }),
+            child: Text(
+              num.toString(),
+              style: textStyle,
+            )),
+      ),
     );
   }
 
@@ -185,7 +189,7 @@ class _ScreenAppState extends State<ScreenApp> {
           ),
         ),
       ),
-      btnOkColor: Colors.purple,
+      btnOkColor: Colors.blue,
       btnOkIcon: Icons.music_note,
       btnOkText: "Go To Chorus",
       btnOkOnPress: () {
@@ -223,7 +227,8 @@ class _ScreenAppState extends State<ScreenApp> {
       floatingActionButton: FloatingActionButton(
         onPressed: _onChooseSongByNumber,
         elevation: 8.0,
-        child: const Icon(Icons.numbers),
+        backgroundColor: Colors.purple,
+        child: const Icon(Icons.numbers, color: Colors.white),
       ),
       body: Obx(
         () => Padding(
@@ -235,39 +240,42 @@ class _ScreenAppState extends State<ScreenApp> {
                   return InkWell(
                     onTap: () => _onSong(index),
                     child: Card(
-                      elevation: 3.0,
-                      child: Row(
-                        children: [
-                          const Icon(
-                            Icons.music_note,
-                            size: 40,
-                            color: Color.fromARGB(255, 79, 11, 108),
-                          ),
-                          Expanded(
-                            flex: 8,
-                            child: Text(
-                              "${index + 1}. ${_chorusController.names[index]}",
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(fontSize: 18),
+                      elevation: 8.0,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              Icons.music_note,
+                              size: 40,
+                              color: Color.fromARGB(255, 79, 11, 108),
                             ),
-                          ),
-                          Expanded(
-                              flex: 2,
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  IconButton(
-                                    onPressed: () => _onYoutube(index),
-                                    icon: Image.asset(
-                                      'assets/youtube.png',
-                                      width: 40,
-                                      height: 40,
-                                    ),
-                                  )
-                                ],
-                              ))
-                        ],
+                            Expanded(
+                              flex: 8,
+                              child: Text(
+                                "${index + 1}. ${_chorusController.names[index]}",
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(fontSize: 18),
+                              ),
+                            ),
+                            // Expanded(
+                            //     flex: 2,
+                            //     child: Row(
+                            //       crossAxisAlignment: CrossAxisAlignment.center,
+                            //       mainAxisAlignment: MainAxisAlignment.end,
+                            //       children: [
+                            //         IconButton(
+                            //           onPressed: () => _onYoutube(index),
+                            //           icon: Image.asset(
+                            //             'assets/youtube.png',
+                            //             width: 40,
+                            //             height: 40,
+                            //           ),
+                            //         )
+                            //       ],
+                            //     ))
+                          ],
+                        ),
                       ),
                     ),
                   );

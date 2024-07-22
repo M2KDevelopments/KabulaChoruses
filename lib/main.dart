@@ -6,7 +6,6 @@ import 'package:kabulachoruses/screens/splash.dart';
 import 'package:kabulachoruses/screens/youtube.dart';
 
 void main() {
-  //shared preferences settings
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
